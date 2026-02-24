@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎓 Xếp Loại Học Lực</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Background blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
+  <div class="app-wrapper">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-content">
+        <div class="logo-area">
+          <span class="logo-icon">🎓</span>
+          <div>
+            <h1 class="app-title">Xếp Loại Học Lực</h1>
+            <p class="app-sub">Theo dõi điểm số thông minh</p>
+          </div>
+        </div>
+        <button id="darkModeBtn" class="dark-btn" title="Chuyển Dark Mode">
+          <span class="dark-icon">🌙</span>
+          <span class="dark-label">Dark Mode</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Semester Tabs -->
+    <div class="semester-tabs">
+      <button class="tab-btn active" data-sem="1">
+        <span>📚</span> Học Kỳ 1
+      </button>
+      <button class="tab-btn" data-sem="2">
+        <span>📖</span> Học Kỳ 2
+      </button>
+    </div>
+
+    <!-- Main content for each semester -->
+    <div id="sem-1" class="semester-panel active">
+      <div class="panel-header">
+        <h2>📚 Bảng Điểm Học Kỳ 1</h2>
+        <button class="add-subject-btn" data-sem="1">＋ Thêm Môn Học</button>
+      </div>
+      <div class="table-container">
+        <table class="grade-table" id="table-1">
+          <thead>
+            <tr>
+              <th>Môn Học</th>
+              <th colspan="4">Điểm Thường Xuyên (TX)</th>
+              <th>Điểm Giữa Kỳ (GK)</th>
+              <th>Điểm Cuối Kỳ (CK)</th>
+              <th>Trung Bình Môn</th>
+              <th>Xóa</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-1"></tbody>
+        </table>
+      </div>
+      <div class="summary-area" id="summary-1">
+        <div class="summary-card" id="tk-card-1">
+          <div class="summary-label">🏆 Điểm Tổng Kết</div>
+          <div class="summary-value" id="tk-value-1">—</div>
+        </div>
+        <div class="summary-card eval-card" id="eval-card-1">
+          <div class="summary-label">📊 Đánh Giá</div>
+          <div class="summary-value" id="eval-value-1">—</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="sem-2" class="semester-panel">
+      <div class="panel-header">
+        <h2>📖 Bảng Điểm Học Kỳ 2</h2>
+        <button class="add-subject-btn" data-sem="2">＋ Thêm Môn Học</button>
+      </div>
+      <div class="table-container">
+        <table class="grade-table" id="table-2">
+          <thead>
+            <tr>
+              <th>Môn Học</th>
+              <th colspan="4">Điểm Thường Xuyên (TX)</th>
+              <th>Điểm Giữa Kỳ (GK)</th>
+              <th>Điểm Cuối Kỳ (CK)</th>
+              <th>Trung Bình Môn</th>
+              <th>Xóa</th>
+            </tr>
+          </thead>
+          <tbody id="tbody-2"></tbody>
+        </table>
+      </div>
+      <div class="summary-area" id="summary-2">
+        <div class="summary-card" id="tk-card-2">
+          <div class="summary-label">🏆 Điểm Tổng Kết</div>
+          <div class="summary-value" id="tk-value-2">—</div>
+        </div>
+        <div class="summary-card eval-card" id="eval-card-2">
+          <div class="summary-label">📊 Đánh Giá</div>
+          <div class="summary-value" id="eval-value-2">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
